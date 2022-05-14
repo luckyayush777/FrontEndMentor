@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Poppins:wght@400;500;600;700&display=swap');
+body{
+    background-image: url("images/bg-intro-desktop.png");
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 100%, 74%) ;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h1 + p{
+    color: white;
+}
+
+h1{
+    font-size: 300%;
+}
+
+h3{
+    background-color: hsl(248, 32%, 49%);
+    color: white;
+    border-radius: 5px;
+    padding: 1em;
+    padding-left: 15%;
+}
+
+
+#HeadingBox{
+    margin-top: 15%;
+    transform: translate(-100px, -20px);
+}
+
+#FormBox{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+}
+
+#Submit{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+}
+
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+input[type=submit]
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    background-color: white;
+    min-width:400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1.5em;
+}
+
+form > input{
+    margin-bottom: 30px;
+    height: 200%;
+    font-size: 16px;
+    padding: 1em;
+    padding-left: 8%;
+    border-color: hsl(246, 25%, 77%);
+    border-radius: 10px;
+    border-width: 0.1px;
+   
+}
+
+#EndText{
+    background-color: white;
+    max-width: fit-content;
+    color: rgb(171, 169, 169);
+    font-size: 0.57em;
+    font-style: bold;
+    transform: translate(65px, -50px);
+}
+
+.Term{
+    color: red;
+}
