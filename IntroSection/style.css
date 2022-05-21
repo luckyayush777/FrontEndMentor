@@ -3,3 +3,67 @@ body{
     font-size: 18px;
     font-family: 'Epilogue', sans-serif;
 }
+
+
+
+
+#TopNavigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+#TopNavigation > img{
+    padding: 20px 0px 0px 20px;
+}
+
+#TopNavigation .NavigationElement{
+    display: flex;
+}
+
+#TopNavigation .NavigationElement > img{
+    height: 15%;
+    width: 45%;
+    transform: translate(10px, 24px);
+}
+
+
+#Page{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+    gap: 0px 150px;
+}
+
+#Page > img{
+    width: 700px;
+}
+
+#ContentBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+#ContentBox h1{
+    font-size: 90px;
+}
+
+#ContentBox .LearnBox{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding : 15px 25px 15px 25px;
+    border-radius: 15px;
+}  
+
+#BottomImages{
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+#BottomImages > img{
+    width: 15%;
+    height: 100%;
+}
