@@ -4,9 +4,6 @@ body{
     font-family: 'Epilogue', sans-serif;
 }
 
-
-
-
 #TopNavigation{
     display: flex;
     justify-content: space-between;
@@ -20,11 +17,28 @@ body{
     display: flex;
 }
 
+#TopNavigation #LoginElement{
+    display: flex;
+}
+
+#TopNavigation #LoginElement .NavigationElement{
+    padding: 0px 50px 0px 0px  ;
+}
+
+#LoginElement p:nth-child(2n)
+{
+    
+    border-color: black;
+    border-radius: 5px;
+    border-collapse: separate;
+}
+
 #TopNavigation .NavigationElement > img{
     height: 15%;
     width: 45%;
     transform: translate(10px, 24px);
 }
+
 
 
 #Page{
@@ -33,6 +47,7 @@ body{
     justify-content: center;
     align-content: center;
     gap: 0px 150px;
+    padding: 70px 0px 0px 0px;
 }
 
 #Page > img{
@@ -66,4 +81,8 @@ body{
 #BottomImages > img{
     width: 15%;
     height: 100%;
+}
+
+h1 + p{
+    color: hsl(0, 0%, 41%);
 }
