@@ -11,10 +11,12 @@ body{
 
 #TopNavigation > img{
     padding: 20px 0px 0px 20px;
+    max-height: 30px;
 }
 
 #TopNavigation .NavigationElement{
     display: flex;
+    color: grey;
 }
 
 #TopNavigation #LoginElement{
@@ -36,9 +38,9 @@ body{
 
 
 #TopNavigation .NavigationElement > img{
-    height: 15%;
+    height: 10%;
     width: 45%;
-    transform: translate(10px, 24px);
+    transform: translate(3px, 24px);
 }
 
 
@@ -48,7 +50,7 @@ body{
     flex-direction: row-reverse;
     justify-content: center;
     align-content: center;
-    gap: 0px 150px;
+    gap:100px 100px;
     padding: 70px 0px 0px 0px;
 }
 
@@ -59,7 +61,12 @@ body{
 #ContentBox{
     display: flex;
     flex-direction: column;
-    justify-content: space-around
+    justify-content: center;
+
+}
+
+#ContentBox #BottomImages{
+    align-items: flex-end;
 }
 
 #ContentBox h1{
@@ -75,7 +82,7 @@ body{
 }  
 
 #BottomImages{
-   
+    margin-top:200px;
     display: flex;
     justify-content: space-between;
 }
