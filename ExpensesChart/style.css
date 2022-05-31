@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(27, 66%, 92%);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
+
+#TopBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    background-color:hsl(10, 79%, 65%);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20%;
+}
+
+#TopBox >img{
+    height: 20%;
+    width: 20%;
+}
+
+.TopTextElement{
+    line-height: 60%;
+}
+
+.TopTextElement :nth-child(odd){
+    font-size: 75%;
+}
+
+.TopTextElement :nth-child(even)
+{
+    font-size: 165%;
+    font-style: bold;
+}
+
+#BottomBox{
+    background-color: hsl(33, 100%, 98%);
+}
+
+#BarGraph{
+    display: flex;
+    justify-content: space-between;
+}
+
+.BarGraphElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.PsuedoBox{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
