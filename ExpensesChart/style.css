@@ -89,8 +89,42 @@ body{
     font-size: 90%;
 }
 
-#footer{
-    position: absolute;
-    top:60%;
+#Footer{
+    transform: translate(0%, 200%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.LeftFooter{
+    line-height: 60%;
+}
+
+.LeftFooter :nth-child(odd){
+    color: hsl(28, 10%, 53%);
+}
+
+.LeftFooter :nth-child(even)
+{
+    font-weight: bold;
+    font-size: 150%;
+    color: hsl(25, 47%, 15%);
+}
+
+.RightFooter{
+    line-height: 60%;
+}
+
+.RightFooter :nth-child(odd)
+{
+    color: hsl(25, 47%, 15%);
+    transform: translate(65%, 0);
+    font-weight: bold;
+}
+
+.RightFooter :nth-child(even)
+{
+    color: hsl(28, 10%, 53%);
+}
+
 
