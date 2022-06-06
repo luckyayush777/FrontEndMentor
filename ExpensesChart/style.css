@@ -7,6 +7,7 @@ body{
     row-gap: 20px;
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
+    padding-bottom: 20px;
 }
 
 #TopBox{
@@ -66,7 +67,7 @@ body{
 
 
 .PsuedoContainer{
-    height: 150px;
+    height: 100px;
     width: 40px;
     border-radius: 5px;
     background-color: inherit;
