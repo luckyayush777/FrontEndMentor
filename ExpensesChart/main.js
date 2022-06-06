@@ -1,15 +1,34 @@
 var barGraphs = document.getElementsByClassName("PsuedoBox");
-for(const bars of barGraphs)
-{
-    bars.style.height = GetRandomSize(100).toString() + "px";
-}
+let numbers = [];
+
 
 function GetRandomSize(max)
 {
     return Math.floor(Math.random() * max);
 }
-
-
-fetch("data.json")
+let i = 0;
+function ReturnString()
+{
+    fetch("data.json")
 .then(response=>response.json())
-.then(data=>console.log(data))
+.then(data=>{
+    while(i < 7){
+    const num = data[i]["amount"];
+    i++;
+    numbers.push(num);
+    }
+    for(const num of numbers)
+    {
+        console.log(num);
+    }
+    for(let i = 0; i < barGraphs.length; i++)
+    {
+    barGraphs[i].style.height = numbers[i].toString() + "px";
+    }
+}
+)
+}
+ReturnString();
+
+
+
