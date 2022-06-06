@@ -3,7 +3,8 @@ body{
     display: flex;
     flex-direction: column;
     background-color: hsl(27, 66%, 92%);
-
+    column-gap: 20px;
+    row-gap: 20px;
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
 }
@@ -16,7 +17,7 @@ body{
     background-color:hsl(10, 79%, 65%);
     padding: 20px;
     border-radius: 5px;
-    margin-top: 20%;
+    margin-top: 10%;    
 }
 
 #TopBox >img{
@@ -40,11 +41,21 @@ body{
 
 #BottomBox{
     background-color: hsl(33, 100%, 98%);
+    padding: 10px;
+    border-radius: 5px;
+    height: 500px;
 }
 
+.BarGraphHeading{
+    font-size: 150%;
+    color: hsl(25, 47%, 15%);
+    font-weight: bold;
+}
 #BarGraph{
     display: flex;
     justify-content: space-between;
+    column-gap: 1%;
+    transform: translate(-7.5px, 0);
 }
 
 .BarGraphElement{
@@ -53,8 +64,33 @@ body{
     justify-content: space-around;
 }
 
+
+.PsuedoContainer{
+    height: 150px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: inherit;
+    position: absolute;
+    top:35%;
+    transform: rotate(180deg) scaleX(-1);
+}
+
 .PsuedoBox{
-    background-color: black;
-    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    background-color: hsl(10, 79%, 65%);
     height: 100%;
 }
+
+.BarGraphElement >p{
+    position: relative;
+    transform: translate(0%, 800%);
+    color: hsl(28, 10%, 53%);
+    font-size: 90%;
+}
+
+#footer{
+    position: absolute;
+    top:60%;
+}
+
