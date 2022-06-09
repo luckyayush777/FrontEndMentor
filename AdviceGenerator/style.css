@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+body{
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#ContentBox{
+    margin-top : 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(217, 19%, 24%);
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#ContentBox :first-child{
+    font-size : 40%;
+    color: hsl(150, 100%, 66%);
+}
+
+
+#CircleAroundDice{
+    height: 50px;
+    width: 50px;
+    transform: translate(0%, 110%);
+    border-radius: 75%;
+    background-color: hsl(150, 100%, 66%);
+}
+
+#CircleAroundDice > img{
+    transform: translate(55%, 35%);
+}
+
+#AdviceText{
+    color:white;
+    text-align: center;
+}
