@@ -2,6 +2,7 @@
 body{
     display: flex;
     flex-direction: column;
+
     background-color: hsl(27, 66%, 92%);
     column-gap: 20px;
     row-gap: 20px;
@@ -86,8 +87,8 @@ body{
     height: 100%;
 }
 
-.PsuedoBox:hover{
-    background-color: cyan;
+.BarGraphElement .PsuedoContainer .PsuedoBox:hover{
+    background-color: hsl(186, 34%, 60%);
 }
 
 .BarGraphElement >p{
@@ -135,4 +136,23 @@ body{
     color: hsl(28, 10%, 53%)
 }
 
+@media screen and (min-device-width : 800px) {
+    body{
+        width: 60%;
+        align-items: center;
+        transform: translate();
+    }
+    #TopBox{
+        margin-top: 10%;
+        width: 40%;
+    }
 
+    #BottomBox{
+        width: 40%;
+        padding: 1em;
+    }
+
+    #BarGraph{
+        column-gap: 0%;
+    }
+}
