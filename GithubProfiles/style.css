@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Manrope:wght@800&display=swap');
+body{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: #141C2F;
+    color: #A1A6AC;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#TopBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#TopBox :nth-child(2)
+{
+    transform:translate(175%, 0);
+}
+
+#BottomBox{
+    background-color: #1F2A48;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#SearchBox{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1F2A48;
+    align-items: center;
+    padding: 2%;
+    border-radius: 10px;
+    font-size: 1em;
+    height: 25%;
+}
+
+#SearchBox :nth-child(1)
+{
+    width: 8%;
+    height: 8%;
+}
+
+#SearchBar{
+    background-color: #1F2A48;
+    border-style: none;
+    width: 70%;
+    color:white;
+
+}
+
+#SearchBox :nth-child(3)
+{
+    background-color: #0078FC;
+    color: white;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 0px;
+}
+
+#NameBox{
+    display: grid;
+    grid-template-areas: 
+        'image Username'
+        'image UserNickname'
+        'image UserJoiningDate';
+}
+
+#NameBox .GridItem1{
+    grid-area: image;
+    width: 95%;
+    transform: translate(-10%, -10%);
+}
+
+#NameBox .GridItem2{
+    grid-area: Username;
+    font-style: bold;
+    font-weight: 800;
+}
+
+#NameBox .GridItem3{
+    grid-area: UserNickname;
+    color: rgba(186, 253, 0, 0.993);
+    font-size: 0.8em;
+    transform: translate(0px, -20%);
+}
+
+#NameBox .GridItem4{
+    grid-area: UserJoiningDate;
+}
+
+#NameBox >div >p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#UserDetails{
+    background-color: #141C2F;
+    display: grid;
+    grid-template-areas: 'Repos     Followers     Following'
+                         'NoOfRepos NoOfFollowers NoOfPeopleFollowed';
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: center;
+    row-gap: 1px;
+    column-gap: 30px;
+}
+
+#UserDetails :nth-child(even)
+{
+    transform: translate(20px);
+}
+
+#UserDetails .UserDetailGridItem1{
+    grid-area: Repos;
+}
+
+#UserDetails .UserDetailGridItem2{
+    grid-area: NoOfRepos;
+}
+
+#UserDetails .UserDetailGridItem3{
+    grid-area: Followers;
+}
+
+#UserDetails .UserDetailGridItem4{
+    grid-area: NoOfFollowers;
+}
+
+#UserDetails .UserDetailGridItem5{
+    grid-area: Following;
+}
+
+#UserDetails .UserDetailGridItem6{
+    grid-area: NoOfPeopleFollowed;
+}
+
+#UserInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.InfoClass{
+    display: flex;
+    column-gap: 5%;
+    align-items: center;
+}
+
+.InfoClass >img{
+    max-width: 40px;
+    max-height: 40px;
+}
