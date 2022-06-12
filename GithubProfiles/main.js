@@ -2,6 +2,33 @@ let searchButton = document.getElementById("SearchButton");
 //class name of the name element is grid item 2
 let userNameOnPage = document.getElementsByClassName("GridItem2")[0];
 let joiningDateOnPage = document.getElementsByClassName("GridItem4")[0];
+let lightModeSwitchButton = document.getElementById("LightModeSwitch");
+lightModeSwitchButton.addEventListener("click", SwitchModes);
+let lightMode = false;
+let initialStyle = document.body.style;
+let initialSearchBoxStyle = document.getElementById("SearchBox").style;
+let initialBottomBoxStyle = document.getElementById("BottomBox").style;
+function SwitchModes()
+{
+    if(lightMode == false)
+    {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        document.getElementById("SearchBox").style.backgroundColor = "#6b93ff";
+        document.getElementById("BottomBox").style.backgroundColor = "#6b93ff";
+        document.getElementById("BottomBox").style.color = "white";
+        
+        lightMode = true;
+        
+    }
+    else 
+    {
+        document.body.style = initialStyle;
+        lightMode = false;
+        document.getElementById("SearchBox").style = initialSearchBoxStyle;  
+        document.getElementById("BottomBox").style = initialBottomBoxStyle;
+    }
+}
 searchButton.addEventListener("click", function(){
     let username = document.getElementById("SearchBar").value;
     return fetch('https://api.github.com/users/' + username)
@@ -10,7 +37,7 @@ searchButton.addEventListener("click", function(){
         document.getElementsByClassName("GridItem2")[0].innerText = response.name;
         document.getElementsByClassName("GridItem3")[0].innerText = response.login;
         document.getElementsByClassName("GridItem4")[0].innerText = 
-        FormatDate(response.created_at).toString();
+        FormatDate(response.created_at);
         document.getElementsByClassName("GridItem1")[0].src = response.avatar_url;
         document.getElementById("UserBio").innerText = response.bio;
         document.getElementsByClassName("UserDetailGridItem2")[0].innerText = response.public_repos;
