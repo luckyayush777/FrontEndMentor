@@ -8,6 +8,11 @@ body{
     row-gap: 20px;
 }
 
+a{
+    text-decoration: none;
+    color: #A1A6AC;
+}
+
 #TopBox{
     display: flex;
     align-items: center;
@@ -72,6 +77,9 @@ body{
     grid-area: image;
     width: 95%;
     transform: translate(-10%, -10%);
+    max-width: 100px;
+    border-radius: 100%;
+    min-width: none;
 }
 
 #NameBox .GridItem2{

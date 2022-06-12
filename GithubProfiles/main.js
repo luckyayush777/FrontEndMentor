@@ -7,9 +7,17 @@ searchButton.addEventListener("click", function(){
     return fetch('https://api.github.com/users/' + username)
     .then(response => response.json())
     .then(response =>  { console.log(response); 
-        document.getElementsByClassName("GridItem2")[0].innerText = response.login;
-        console.log(FormatDate(response.created_at));
-        document.getElementsByClassName("GridItem4")[0].innerText = FormatDate(response.created_at).toString();
+        document.getElementsByClassName("GridItem2")[0].innerText = response.name;
+        document.getElementsByClassName("GridItem3")[0].innerText = response.login;
+        document.getElementsByClassName("GridItem4")[0].innerText = 
+        FormatDate(response.created_at).toString();
+        document.getElementsByClassName("GridItem1")[0].src = response.avatar_url;
+        document.getElementById("UserBio").innerText = response.bio;
+        document.getElementsByClassName("UserDetailGridItem2")[0].innerText = response.public_repos;
+        document.getElementsByClassName("UserDetailGridItem4")[0].innerText = response.followers;
+        document.getElementsByClassName("UserDetailGridItem6")[0].innerText = response.following;
+        document.getElementsByClassName("UserLocation")[0].innerText = LocationParser(response.location);
+        document.getElementsByClassName("BlogLink")[0].href = response.blog;
     })
 })
 
@@ -24,7 +32,9 @@ function FormatDate(date)
             
         }           
         else 
+        {
             break;
+        }
 
     }
     let joiningYear = "";
@@ -78,4 +88,16 @@ function ReturnMonthOnIndex(index)
         break;
     }
     return month;
+}
+
+function LocationParser(locationData)
+{
+    let cityLocation = "";
+    for(var i = 0; i < locationData.length; i++)
+    {
+        if(locationData.charAt(i) != ",")
+        cityLocation += locationData.charAt(i);
+        else break;
+    }
+    return cityLocation;
 }
